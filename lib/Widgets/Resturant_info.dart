@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_dedlivery_app/Models/Resturant.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../Constants/Colors.dart';
 
@@ -10,7 +11,7 @@ class ResturantInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 20),
+      margin: EdgeInsets.only(top: 10),
       padding: EdgeInsets.symmetric(horizontal: 25),
       child: Column(
         children: [
@@ -22,7 +23,10 @@ class ResturantInfo extends StatelessWidget {
                 children: [
                   Text(
                     resturant.name,
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: GoogleFonts.roboto(
+                        fontSize: 30,
+                        fontWeight: FontWeight.w600,
+                        color: kPrimaryColor),
                   ),
                   SizedBox(
                     height: 10,
@@ -68,31 +72,31 @@ class ResturantInfo extends StatelessWidget {
               )
             ],
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                '"${resturant.desc}"',
-                style: TextStyle(fontSize: 16),
-              ),
-              Row(
-                children: [
-                  Icon(
-                    Icons.star_outline,
-                    color: kPrimaryColor,
-                  ),
-                  Text(
-                    '${resturant.Score}',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(
-                    width: 15,
-                  ),
-                ],
-              )
-            ],
-          )
+          // Row(
+          //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //   crossAxisAlignment: CrossAxisAlignment.start,
+          //   children: [
+          //     Text(
+          //       '"${resturant.desc}"',
+          //       style: TextStyle(fontSize: 16),
+          //     ),
+          //     // Row(
+          //     //   children: [
+          //     //     Icon(
+          //     //       Icons.star_outline,
+          //     //       color: kPrimaryColor,
+          //     //     ),
+          //     //     Text(
+          //     //       '${resturant.Score}',
+          //     //       style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          //     //     ),
+          //     //     SizedBox(
+          //     //       width: 15,
+          //     //     ),
+          //     //   ],
+          //     // )
+          //   ],
+          // )
         ],
       ),
     );
